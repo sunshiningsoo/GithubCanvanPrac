@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("이슈 커밋 텍스트 잘되고 있는지 확인")
+                .padding()
+        }
     }
 }
 
