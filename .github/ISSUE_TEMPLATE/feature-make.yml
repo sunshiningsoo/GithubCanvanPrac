@@ -37,7 +37,7 @@ body:
   - type: textarea
     id: feat-description
     attributes:
-      label: :sparkles: 작업할 내용
+      label: 작업할 내용
       description: 작업할 내용을 상세히 적어주세요
     validations:
       required: true
