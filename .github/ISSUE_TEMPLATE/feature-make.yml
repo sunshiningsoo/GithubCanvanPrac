@@ -1,4 +1,4 @@
-name: :sparkles: Feature 추가합니다
+name: Feature 추가합니다
 description: 새로운 Feature를 추가합니다.
 body:
   - type: markdown
@@ -37,7 +37,7 @@ body:
   - type: textarea
     id: feat-description
     attributes:
-      label: 작업할 내용
+      label: :sparkles: 작업할 내용
       description: 작업할 내용을 상세히 적어주세요
     validations:
       required: true
