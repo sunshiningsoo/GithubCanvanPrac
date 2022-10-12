@@ -1,4 +1,4 @@
-name: Bug
+name: Feature 추가합니다
 description: File a bug report
 body:
   - type: markdown
