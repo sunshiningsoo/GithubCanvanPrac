@@ -1,22 +1,12 @@
 name: Feature 추가합니다
-description: File a bug report
+description: 새로운 Feature를 추가합니다.
 body:
   - type: markdown
     attributes:
       value: |
-        Before opening a bug report, please search for the behaviour in the existing issues. 
+        새로운 Feature를 추가합니다.
         
         ---
-        
-        Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
-  - type: input
-    id: os
-    attributes:
-      label: Operating system
-      description: "Which operating system do you use? Please provide the version as well."
-      placeholder: "macOS Big Sur 11.5.2"
-    validations:
-      required: true  
   - type: input
     id: laravel
     attributes:
@@ -45,20 +35,21 @@ body:
     validations:
       required: true
   - type: textarea
-    id: bug-description
+    id: feat-description
     attributes:
-      label: Bug description
-      description: What happened?
+      label: 작업할 내용
+      description: 작업할 내용을 상세히 적어주세요
     validations:
       required: true
   - type: textarea
-    id: steps
+    id: screenshot
     attributes:
-      label: Steps to reproduce
-      description: Which steps do we need to take to reproduce this error?
+      label: 스크린샷 혹은 gif
+      description: 작업할 내용의 스크린샷 혹은 UX라면 gif를 추가해주세요
   - type: textarea
-    id: logs
+    id: todo
     attributes:
-      label: Relevant log output
-      description: If applicable, provide relevant log output. No need for backticks here.
-      render: shell
+      label: TODO
+      description: 해당 작업을 완료하기 위한 TODO 리스트를 작성해 주세요.
+    validations:
+      required: true
