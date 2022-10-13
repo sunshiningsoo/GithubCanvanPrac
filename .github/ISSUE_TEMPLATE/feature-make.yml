@@ -8,30 +8,11 @@ body:
         
         ---
   - type: input
-    id: laravel
-    attributes:
-      label: Laravel Version
-      description: "Please provide the full Laravel version of your project."
-      placeholder: "v8.6.1"
-    validations:
-      required: true
-  - type: input
     id: php
     attributes:
       label: PHP Version
       description: "Please provide the full PHP version that is powering Tinkerwell."
       placeholder: "PHP 8.0.7, built: Jun  4 2021 01:50:04"
-    validations:
-      required: true
-  - type: dropdown
-    id: location
-    attributes:
-      label: Project Location
-      description: Where is the project located?
-      options:
-        - Local
-        - Remote
-        - Somewhere else (please specify in the description!)
     validations:
       required: true
   - type: textarea
@@ -45,12 +26,14 @@ body:
     id: screenshot
     attributes:
       label: 스크린샷 혹은 gif
-      description: 작업할 내용의 스크린샷 혹은 UX라면 gif를 추가해주세요
+      description: "작업할 내용의 스크린샷 혹은 UX라면 gif를 추가해주세요
+            <img src='https://블라블라' width='300'>"
       placeholder: "<img src='https://블라블라' width='300'>"
   - type: textarea
     id: todo
     attributes:
       label: TODO
       description: 해당 작업을 완료하기 위한 TODO 리스트를 작성해 주세요.
+      placeholder: "- [ ] todo1"
     validations:
       required: true
