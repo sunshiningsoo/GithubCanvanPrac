@@ -19,7 +19,7 @@ body:
     attributes:
       label: 관련 이슈넘버
       description: "해당 Feature와 관련된 이슈들을 적어주세요"
-      placeholder: "#3, #4"
+      placeholder: "#3, #4..."
   - type: textarea
     id: screenshot
     attributes:
@@ -32,5 +32,3 @@ body:
       label: TODO
       description: 해당 작업을 완료하기 위한 TODO 리스트를 작성해 주세요.
       placeholder: "- [ ] todo1"
-    validations:
-      required: true
