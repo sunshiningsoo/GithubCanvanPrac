@@ -1,4 +1,4 @@
-name: Feature 추가합니다
+name: Feature Template 생성
 description: 새로운 Feature를 추가합니다.
 body:
   - type: markdown
@@ -7,14 +7,6 @@ body:
         새로운 Feature를 추가합니다.
         
         ---
-  - type: input
-    id: php
-    attributes:
-      label: PHP Version
-      description: "Please provide the full PHP version that is powering Tinkerwell."
-      placeholder: "PHP 8.0.7, built: Jun  4 2021 01:50:04"
-    validations:
-      required: true
   - type: textarea
     id: feat-description
     attributes:
@@ -22,11 +14,17 @@ body:
       description: 작업할 내용을 상세히 적어주세요
     validations:
       required: true
+  - type: input
+    id: relatedIssueNumber
+    attributes:
+      label: 관련 이슈넘버
+      description: "해당 Feature와 관련된 이슈들을 적어주세요"
+      placeholder: "#3, #4"
   - type: textarea
     id: screenshot
     attributes:
       label: 스크린샷 혹은 gif
-      description: "작업할 내용의 스크린샷 혹은 UX라면 gif를 추가해주세요"
+      description: "작업할 내용의 스크린샷, UX라면 gif를 추가해주세요"
       placeholder: "<img src='https://블라블라' width='300'>"
   - type: textarea
     id: todo
