@@ -27,7 +27,7 @@ body:
     attributes:
       label: 스크린샷 혹은 gif
       description: "작업할 내용의 스크린샷 혹은 UX라면 gif를 추가해주세요
-            <img src='https://블라블라' width='300'>"
+            예시: '<img src=\"https://블라블라\" width=\"300\">'"
       placeholder: "<img src='https://블라블라' width='300'>"
   - type: textarea
     id: todo
