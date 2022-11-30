@@ -14,6 +14,7 @@ struct ContentView: View {
                 .padding()
             Text("MVVM패턴 적용하려 합니다.")
             Text("PR TEMPLATE TEST")
+            Text("TEST1")
         }
     }
 }
