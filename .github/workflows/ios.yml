@@ -16,20 +16,7 @@ jobs:
       runs-on: macos-latest
     
       env:
-        CLIENT_ID: ${{ secrets.CLIENT_ID}}
-        REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
-        API_KEY: ${{ secrets.API_KEY}}
-        GCM_SENDER_ID: ${{ secrets.GCM_SENDER_ID}}
-        PLIST_VERSION: ${{ secrets.PLIST_VERSION}}
-        BUNDLE_ID: ${{ secrets.BUNDLE_ID}}
-        PROJECT_ID: ${{ secrets.PROJECT_ID}}
-        STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET}}
-        IS_ADS_ENABLED: ${{ secrets.IS_ADS_ENABLED}}
-        IS_ANALYTICS_ENABLED: ${{ secrets.IS_ANALYTICS_ENABLED}}
-        IS_APPINVITE_ENABLED: ${{ secrets.IS_APPINVITE_ENABLED}}
-        IS_GCM_ENABLED: ${{ secrets.IS_GCM_ENABLED}}
-        IS_SIGNIN_ENABLED: ${{ secrets.IS_SIGNIN_ENABLED}}
-        GOOGLE_APP_ID: ${{ secrets.GOOGLE_APP_ID}}
+        TEST_API_KEY: ${{ secrets.TEST_API_KEY }}
     
     # Step은 job의 일부로 실행될 일련의 task들을 나타냄
       steps:
@@ -37,21 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: GoogleServieInfomake
         run: |
-          echo "CLIENT_ID=$CLIENT_ID" >> GoogleServieInfo.plist
-          echo "REVERSED_CLIENT_ID=$REVERSED_CLIENT_ID" >> GoogleServieInfo.plist
-          echo "API_KEY=$API_KEY" >> GoogleServieInfo.plist
-          echo "GCM_SENDER_ID=$GCM_SENDER_ID" >> GoogleServieInfo.plist
-          echo "PLIST_VERSION=$PLIST_VERSION" >> GoogleServieInfo.plist
-          echo "BUNDLE_ID=$BUNDLE_ID" >> GoogleServieInfo.plist
-          echo "PROJECT_ID=$PROJECT_ID" >> GoogleServieInfo.plist
-          echo "STORAGE_BUCKET=$STORAGE_BUCKET" >> GoogleServieInfo.plist
-          echo "IS_ADS_ENABLED=$IS_ADS_ENABLED" >> GoogleServieInfo.plist
-          echo "IS_ANALYTICS_ENABLED=$IS_ANALYTICS_ENABLED" >> GoogleServieInfo.plist
-          echo "IS_APPINVITE_ENABLED=$IS_APPINVITE_ENABLED" >> GoogleServieInfo.plist
-          echo "IS_GCM_ENABLED=$IS_GCM_ENABLED" >> GoogleServieInfo.plist
-          echo "IS_SIGNIN_ENABLED=$IS_SIGNIN_ENABLED" >> GoogleServieInfo.plist
-          echo "GOOGLE_APP_ID=$GOOGLE_APP_ID" >> GoogleServieInfo.plist
-        
+          echo -n $TEST_API_KEY | base64 --decode > GithubCanvanPrac/GoogleService-Info.plist
     
     # shell 이용해서 하나의 command 수행
       - name: Start xcode build 🛠
