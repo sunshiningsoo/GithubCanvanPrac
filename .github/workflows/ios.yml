@@ -20,7 +20,7 @@ jobs:
     # uses 키워드를 통해 Github Actions에서 기본으로 제공하는 액션을 사용 가능. 아래 액션은 repository 에 체크아웃하는 것
     - uses: actions/checkout@v2
     - name: GoogleServieInfomake
-        run: |
+      run: |
         echo "CLIENT_ID=$CLIENT_ID" >> GoogleServieInfo.plist
         echo "REVERSED_CLIENT_ID=$REVERSED_CLIENT_ID" >> GoogleServieInfo.plist
         echo "API_KEY=$API_KEY" >> GoogleServieInfo.plist
@@ -36,25 +36,24 @@ jobs:
         echo "IS_GCM_ENABLED=$IS_GCM_ENABLED" >> GoogleServieInfo.plist
         echo "IS_SIGNIN_ENABLED=$IS_SIGNIN_ENABLED" >> GoogleServieInfo.plist
         echo "GOOGLE_APP_ID=$GOOGLE_APP_ID" >> GoogleServieInfo.plist
-        env:
-            CLIENT_ID: ${{ secrets.CLIENT_ID}}
-            REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
-            API_KEY: ${{ secrets.API_KEY}}
-            GCM_SENDER_ID: ${{ secrets.GCM_SENDER_ID}}
-            PLIST_VERSION: ${{ secrets.PLIST_VERSION}}
-            BUNDLE_ID: ${{ secrets.BUNDLE_ID}}
-            PROJECT_ID: ${{ secrets.PROJECT_ID}}
-            STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET}}
-            IS_ADS_ENABLED: ${{ secrets.IS_ADS_ENABLED}}
-            IS_ANALYTICS_ENABLED: ${{ secrets.IS_ANALYTICS_ENABLED}}
-            IS_APPINVITE_ENABLED: ${{ secrets.IS_APPINVITE_ENABLED}}
-            IS_GCM_ENABLED: ${{ secrets.IS_GCM_ENABLED}}
-            IS_SIGNIN_ENABLED: ${{ secrets.IS_SIGNIN_ENABLED}}
-            GOOGLE_APP_ID: ${{ secrets.GOOGLE_APP_ID}}
+      env:
+        CLIENT_ID: ${{ secrets.CLIENT_ID}}
+        REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
+        API_KEY: ${{ secrets.API_KEY}}
+        GCM_SENDER_ID: ${{ secrets.GCM_SENDER_ID}}
+        PLIST_VERSION: ${{ secrets.PLIST_VERSION}}
+        BUNDLE_ID: ${{ secrets.BUNDLE_ID}}
+        PROJECT_ID: ${{ secrets.PROJECT_ID}}
+        STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET}}
+        IS_ADS_ENABLED: ${{ secrets.IS_ADS_ENABLED}}
+        IS_ANALYTICS_ENABLED: ${{ secrets.IS_ANALYTICS_ENABLED}}
+        IS_APPINVITE_ENABLED: ${{ secrets.IS_APPINVITE_ENABLED}}
+        IS_GCM_ENABLED: ${{ secrets.IS_GCM_ENABLED}}
+        IS_SIGNIN_ENABLED: ${{ secrets.IS_SIGNIN_ENABLED}}
+        GOOGLE_APP_ID: ${{ secrets.GOOGLE_APP_ID}}
     
     
     # shell 이용해서 하나의 command 수행
     - name: Start xcode build 🛠
-        run: |
+      run: |
         xcodebuild build -project GithubCanvanPrac.xcodeproj -scheme GithubCanvanPrac -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
-
