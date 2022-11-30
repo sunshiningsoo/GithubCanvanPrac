@@ -15,21 +15,21 @@ jobs:
     # job이 실행될 환경 - 최신 mac os
       runs-on: macos-latest
     
-    env:
-      CLIENT_ID: ${{ secrets.CLIENT_ID}}
-      REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
-      API_KEY: ${{ secrets.API_KEY}}
-      GCM_SENDER_ID: ${{ secrets.GCM_SENDER_ID}}
-      PLIST_VERSION: ${{ secrets.PLIST_VERSION}}
-      BUNDLE_ID: ${{ secrets.BUNDLE_ID}}
-      PROJECT_ID: ${{ secrets.PROJECT_ID}}
-      STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET}}
-      IS_ADS_ENABLED: ${{ secrets.IS_ADS_ENABLED}}
-      IS_ANALYTICS_ENABLED: ${{ secrets.IS_ANALYTICS_ENABLED}}
-      IS_APPINVITE_ENABLED: ${{ secrets.IS_APPINVITE_ENABLED}}
-      IS_GCM_ENABLED: ${{ secrets.IS_GCM_ENABLED}}
-      IS_SIGNIN_ENABLED: ${{ secrets.IS_SIGNIN_ENABLED}}
-      GOOGLE_APP_ID: ${{ secrets.GOOGLE_APP_ID}}
+      env:
+        CLIENT_ID: ${{ secrets.CLIENT_ID}}
+        REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
+        API_KEY: ${{ secrets.API_KEY}}
+        GCM_SENDER_ID: ${{ secrets.GCM_SENDER_ID}}
+        PLIST_VERSION: ${{ secrets.PLIST_VERSION}}
+        BUNDLE_ID: ${{ secrets.BUNDLE_ID}}
+        PROJECT_ID: ${{ secrets.PROJECT_ID}}
+        STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET}}
+        IS_ADS_ENABLED: ${{ secrets.IS_ADS_ENABLED}}
+        IS_ANALYTICS_ENABLED: ${{ secrets.IS_ANALYTICS_ENABLED}}
+        IS_APPINVITE_ENABLED: ${{ secrets.IS_APPINVITE_ENABLED}}
+        IS_GCM_ENABLED: ${{ secrets.IS_GCM_ENABLED}}
+        IS_SIGNIN_ENABLED: ${{ secrets.IS_SIGNIN_ENABLED}}
+        GOOGLE_APP_ID: ${{ secrets.GOOGLE_APP_ID}}
     
     # Step은 job의 일부로 실행될 일련의 task들을 나타냄
       steps:
