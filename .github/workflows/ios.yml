@@ -55,4 +55,4 @@ jobs:
     # shell 이용해서 하나의 command 수행
       - name: Start xcode build 🛠
         run: |
-          xcodebuild build -project GithubCanvanPrac.xcodeproj -scheme GithubCanvanPrac -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
+          xcodebuild build -project GithubCanvanPrac/GithubCanvanPrac.xcodeproj -scheme GithubCanvanPrac -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
