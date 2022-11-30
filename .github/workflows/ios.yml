@@ -30,7 +30,6 @@ jobs:
           echo "PROJECT_ID=$PROJECT_ID" >> GoogleServieInfo.plist
           echo "STORAGE_BUCKET=$STORAGE_BUCKET" >> GoogleServieInfo.plist
           echo "IS_ADS_ENABLED=$IS_ADS_ENABLED" >> GoogleServieInfo.plist
-          echo "CLIENT_ID=$CLIENT_ID" >> GoogleServieInfo.plist
           echo "IS_ANALYTICS_ENABLED=$IS_ANALYTICS_ENABLED" >> GoogleServieInfo.plist
           echo "IS_APPINVITE_ENABLED=$IS_APPINVITE_ENABLED" >> GoogleServieInfo.plist
           echo "IS_GCM_ENABLED=$IS_GCM_ENABLED" >> GoogleServieInfo.plist
