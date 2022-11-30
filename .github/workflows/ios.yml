@@ -35,7 +35,7 @@ jobs:
           echo "IS_GCM_ENABLED=$IS_GCM_ENABLED" >> GoogleServieInfo.plist
           echo "IS_SIGNIN_ENABLED=$IS_SIGNIN_ENABLED" >> GoogleServieInfo.plist
           echo "GOOGLE_APP_ID=$GOOGLE_APP_ID" >> GoogleServieInfo.plist
-        env:
+        plist:
           CLIENT_ID: ${{ secrets.CLIENT_ID}}
           REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
           API_KEY: ${{ secrets.API_KEY}}
@@ -55,4 +55,4 @@ jobs:
     # shell 이용해서 하나의 command 수행
       - name: Start xcode build 🛠
         run: |
-          xcodebuild build -project GithubCanvanPrac/GithubCanvanPrac.xcodeproj -scheme GithubCanvanPrac -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
+          xcodebuild build -project GithubCanvanPrac.xcodeproj -scheme GithubCanvanPrac -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
