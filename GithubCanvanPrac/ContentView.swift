@@ -15,6 +15,7 @@ struct ContentView: View {
             Text("MVVM패턴 적용하려 합니다.")
             Text("PR TEMPLATE TEST")
             Text("일해라!")
+            Text("일해라!")
         }
     }
 }
