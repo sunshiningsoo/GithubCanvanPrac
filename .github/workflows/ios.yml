@@ -15,6 +15,22 @@ jobs:
     # job이 실행될 환경 - 최신 mac os
       runs-on: macos-latest
     
+    env:
+      CLIENT_ID: ${{ secrets.CLIENT_ID}}
+      REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
+      API_KEY: ${{ secrets.API_KEY}}
+      GCM_SENDER_ID: ${{ secrets.GCM_SENDER_ID}}
+      PLIST_VERSION: ${{ secrets.PLIST_VERSION}}
+      BUNDLE_ID: ${{ secrets.BUNDLE_ID}}
+      PROJECT_ID: ${{ secrets.PROJECT_ID}}
+      STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET}}
+      IS_ADS_ENABLED: ${{ secrets.IS_ADS_ENABLED}}
+      IS_ANALYTICS_ENABLED: ${{ secrets.IS_ANALYTICS_ENABLED}}
+      IS_APPINVITE_ENABLED: ${{ secrets.IS_APPINVITE_ENABLED}}
+      IS_GCM_ENABLED: ${{ secrets.IS_GCM_ENABLED}}
+      IS_SIGNIN_ENABLED: ${{ secrets.IS_SIGNIN_ENABLED}}
+      GOOGLE_APP_ID: ${{ secrets.GOOGLE_APP_ID}}
+    
     # Step은 job의 일부로 실행될 일련의 task들을 나타냄
       steps:
     # uses 키워드를 통해 Github Actions에서 기본으로 제공하는 액션을 사용 가능. 아래 액션은 repository 에 체크아웃하는 것
@@ -35,22 +51,7 @@ jobs:
           echo "IS_GCM_ENABLED=$IS_GCM_ENABLED" >> GoogleServieInfo.plist
           echo "IS_SIGNIN_ENABLED=$IS_SIGNIN_ENABLED" >> GoogleServieInfo.plist
           echo "GOOGLE_APP_ID=$GOOGLE_APP_ID" >> GoogleServieInfo.plist
-        env:
-          CLIENT_ID: ${{ secrets.CLIENT_ID}}
-          REVERSED_CLIENT_ID: ${{ secrets.REVERSED_CLIENT_ID}}
-          API_KEY: ${{ secrets.API_KEY}}
-          GCM_SENDER_ID: ${{ secrets.GCM_SENDER_ID}}
-          PLIST_VERSION: ${{ secrets.PLIST_VERSION}}
-          BUNDLE_ID: ${{ secrets.BUNDLE_ID}}
-          PROJECT_ID: ${{ secrets.PROJECT_ID}}
-          STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET}}
-          IS_ADS_ENABLED: ${{ secrets.IS_ADS_ENABLED}}
-          IS_ANALYTICS_ENABLED: ${{ secrets.IS_ANALYTICS_ENABLED}}
-          IS_APPINVITE_ENABLED: ${{ secrets.IS_APPINVITE_ENABLED}}
-          IS_GCM_ENABLED: ${{ secrets.IS_GCM_ENABLED}}
-          IS_SIGNIN_ENABLED: ${{ secrets.IS_SIGNIN_ENABLED}}
-          GOOGLE_APP_ID: ${{ secrets.GOOGLE_APP_ID}}
-    
+        
     
     # shell 이용해서 하나의 command 수행
       - name: Start xcode build 🛠
