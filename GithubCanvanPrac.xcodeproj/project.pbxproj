@@ -11,6 +11,8 @@
 		DF46D1A3284115D0008978E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF46D1A2284115D0008978E0 /* ContentView.swift */; };
 		DF46D1A5284115D2008978E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF46D1A4284115D2008978E0 /* Assets.xcassets */; };
 		DF46D1A8284115D2008978E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF46D1A7284115D2008978E0 /* Preview Assets.xcassets */; };
+		DF717B8229370BFB00B9A20D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF717B8129370BFA00B9A20D /* GoogleService-Info.plist */; };
+		DF717B8529370C5900B9A20D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DF717B8429370C5900B9A20D /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		DF46D1A2284115D0008978E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF46D1A4284115D2008978E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF46D1A7284115D2008978E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF717B8129370BFA00B9A20D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF717B8529370C5900B9A20D /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				DF46D1A0284115D0008978E0 /* GithubCanvanPracApp.swift */,
 				DF46D1A2284115D0008978E0 /* ContentView.swift */,
+				DF717B8129370BFA00B9A20D /* GoogleService-Info.plist */,
 				DF46D1A4284115D2008978E0 /* Assets.xcassets */,
 				DF46D1A6284115D2008978E0 /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = GithubCanvanPrac;
+			packageProductDependencies = (
+				DF717B8429370C5900B9A20D /* FirebaseStorage */,
+			);
 			productName = GithubCanvanPrac;
 			productReference = DF46D19D284115D0008978E0 /* GithubCanvanPrac.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = DF46D194284115D0008978E0;
+			packageReferences = (
+				DF717B8329370C5900B9A20D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DF46D19E284115D0008978E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +138,7 @@
 			files = (
 				DF46D1A8284115D2008978E0 /* Preview Assets.xcassets in Resources */,
 				DF46D1A5284115D2008978E0 /* Assets.xcassets in Resources */,
+				DF717B8229370BFB00B9A20D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF717B8329370C5900B9A20D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF717B8429370C5900B9A20D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF717B8329370C5900B9A20D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF46D195284115D0008978E0 /* Project object */;
 }
