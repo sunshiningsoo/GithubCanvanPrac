@@ -18,6 +18,7 @@ struct ContentView: View {
             Text("일해라!")
             Text("일해라!!!")
             Text("REBASE TEST")
+            Text("체리픽")
         }
     }
 }
