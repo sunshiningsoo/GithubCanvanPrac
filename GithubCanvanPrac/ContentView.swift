@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            Text("rebase")
             Text("이슈 커밋 텍스트 잘되고 있는지 확인")
                 .padding()
             Text("MVVM패턴 적용하려 합니다.")
