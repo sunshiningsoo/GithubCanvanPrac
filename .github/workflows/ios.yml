@@ -1,5 +1,5 @@
 # workflow 의 이름
-name: test_on_dev
+name: 테스트 하겠습니다
 
 on:
     # develop 브랜치에 push 나 pull request 이벤트가 일어났을때 해당 workflow 를 trigger
@@ -14,10 +14,7 @@ jobs:
     build:
     # job이 실행될 환경 - 최신 mac os
       runs-on: macos-latest
-    
-      env:
-        TEST_API_KEY: ${{ secrets.TEST_API_KEY }}
-    
+
     # Step은 job의 일부로 실행될 일련의 task들을 나타냄
       steps:
     # uses 키워드를 통해 Github Actions에서 기본으로 제공하는 액션을 사용 가능. 아래 액션은 repository 에 체크아웃하는 것
